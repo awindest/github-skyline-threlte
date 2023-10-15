@@ -5,7 +5,14 @@
 	import { T } from '@threlte/core'
 	import { Center, Grid, OrbitControls, Text } from '@threlte/extras'
 
-	// export let contributions = []
+	export let contributions = []
+	// let contributions: Contributions[] = []
+
+	onMount(async () => {
+		const response = await fetch('https://github-contributions-api-plum.vercel.app/awindest/2023')
+		contributions = await response.json()
+		console.log(contributions)
+	})
 
 	function getColor(level) {
 		// these colors are what github uses on their overview page for your contributions 'level'

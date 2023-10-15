@@ -1,3 +1,15 @@
+<!--                                  
+╭━━╮╱╱╱╱╭╮╱╱╱╱╱╭╮╱╭╮╱╱╱╱╱╭╮            ━╮ ╭━
+╰┫┣╯╱╱╱╱┃┃╱╱╱╱╭╯╰╮┃┃╱╱╱╱╱┃┃             | |
+╱┃┃╭━╮╭━╯┣━━┳━┻╮╭╯┃┃╱╱╭━━┫╰━┳━━╮       ╱ o \
+╱┃┃┃╭╮┫╭╮┃┃━┫━━┫┃╱┃┃╱╭┫╭╮┃╭╮┃━━┫      ╱_____\
+╭┫┣┫┃┃┃╰╯┃┃━╋━━┃╰╮┃╰━╯┃╭╮┃╰╯┣━━┃     ╱    o  \  
+╰━━┻╯╰┻━━┻━━┻━━┻━╯╰━━━┻╯╰┻━━┻━━╯    (__o______)  
+
+Yet another science experiment from Indest Labs.
+
+Recommend viewing in Visual Source Code.
+-->
 <script>
 	import fly from './transitions.js'
 	export let open = false
@@ -19,8 +31,9 @@
 		</p>
 
 		<p>
-			This visualization shows the distribution of my github contributions in a grid for the year
-			2023. The data is static due to github pages only supports static-only web sites.
+			This visualization shows the distribution of my github contributions in a grid for the current
+			year. The data is dynamic and refreshes each time the page is loaded which is cool as github
+			pages supports static-only web sites.
 		</p>
 		<p>
 			Instructions: scroll to zoom; click and drag to rotate; click and hold to stop the annoying
@@ -49,5 +62,24 @@
 		font-size: 20px;
 		color: #ffffff;
 		font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	}
+	/* unvisited link */
+	a:link {
+		color: #ffffff;
+	}
+
+	/* visited link */
+	a:visited {
+		color: #ffffff;
+	}
+
+	/* mouse over link */
+	a:hover {
+		color: #00d35c;
+	}
+
+	/* selected link */
+	a:active {
+		color: #00d35c;
 	}
 </style>
