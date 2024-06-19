@@ -31,8 +31,8 @@ Recommend viewing in Visual Source Code.
 		</p>
 
 		<p>
-			This visualization shows the distribution of my github contributions in a grid for the current
-			year. The data is dynamic and refreshes each time the page is loaded which is cool as github
+			This visualization shows the distribution of my github contributions in a grid for the year
+			2023. The data is dynamic and refreshes each time the page is loaded which is cool as github
 			pages supports static-only web sites.
 		</p>
 		<p>

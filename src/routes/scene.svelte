@@ -1,18 +1,10 @@
 <script>
+	import contributions from '$lib/data/contributions.js'
 	import { onMount } from 'svelte'
 	import { tweened } from 'svelte/motion'
 	import { quadInOut } from 'svelte/easing'
 	import { T } from '@threlte/core'
-	import { Center, Grid, OrbitControls, Text } from '@threlte/extras'
-
-	export let contributions = []
-	// let contributions: Contributions[] = []
-
-	onMount(async () => {
-		const response = await fetch('https://github-contributions-api-plum.vercel.app/awindest/2023')
-		contributions = await response.json()
-		console.log(contributions)
-	})
+	import { Align, Grid, OrbitControls, Text } from '@threlte/extras'
 
 	function getColor(level) {
 		// these colors are what github uses on their overview page for your contributions 'level'
@@ -36,7 +28,7 @@
 	onMount(() => {
 		$scaleY = 1
 	})
-	const font = '/fonts/Averox-webfont.woff2'
+	// const font = '/fonts/Averox-webfont.woff'
 </script>
 
 <Grid infiniteGrid sectionColor="#4a4b4a" sectionSize={20} cellSize={20} fadeDistance={400} />
@@ -48,7 +40,7 @@
 <T.AmbientLight color="#fff" intensity={0.4} />
 <T.DirectionalLight position={[0, 200, 200]} intensity={2} color="#fff" />
 <T.DirectionalLight position={[0, 200, -200]} intensity={2} color="#fff" />
-<Center autoCenter position.y={40}>
+<Align autoCenter position.y={40}>
 	{#each contributions as row, i}
 		{#each row as day, j}
 			{#if day}
@@ -63,17 +55,19 @@
 			{/if}
 		{/each}
 	{/each}
-</Center>
+</Align>
 
 <Text
 	text="awindest"
 	color="#00d35c"
-	{font}
+	font="/fonts/Averox-webfont.woff"
 	fontSize="10"
 	anchorX="50%"
 	anchorY="100%"
 	characters="abcdefghijklmnopqrstuvwxyz"
 />
+
+<!-- {font} -->
 
 <style>
 	@font-face {

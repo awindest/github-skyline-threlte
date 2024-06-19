@@ -1,4 +1,4 @@
-let contributions = [
+export default [
     [
         {
             count: 0,
