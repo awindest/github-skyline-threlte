@@ -60,7 +60,7 @@
 <Text
 	text="awindest"
 	color="#00d35c"
-	font="/fonts/Averox-webfont.woff"
+	font="./fonts/Averox-webfont.woff"
 	fontSize="10"
 	anchorX="50%"
 	anchorY="100%"
@@ -70,11 +70,11 @@
 <!-- {font} -->
 
 <style>
-	@font-face {
+	/* @font-face {
 		font-family: 'Averox';
-		src: url('/fonts/Averox-webfont.woff2') format('woff2');
+		src: url('./fonts/Averox-webfont.woff2') format('woff2');
 		font-style: normal;
 		font-weight: 500;
 		font-display: swap;
-	}
+	} */
 </style>
